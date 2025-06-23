@@ -35,32 +35,32 @@
                 {
                     if (humanChoice === "rock") {
                         if (compChoice === "paper"){
-                            return "You Lose! Paper beats Rock";
                             computerScore += 1;
+                            return "You Lose! Paper beats Rock";
                         }
                         else if (compChoice === "scissors"){
-                            return "You Win! Rock beats Scissors";
                             humanScore += 1;
+                            return "You Win! Rock beats Scissors";
                         }
                     }
                     else if (humanChoice === "paper") {
                         if (compChoice === "rock"){
-                            return "You Win! Paper beats Rock";
                             humanScore += 1;
+                            return "You Win! Paper beats Rock";
                         }
                         else if (compChoice === "scissors"){
-                            return "You Lose! Scissors beats Paper";
                             computerScore += 1;
+                            return "You Lose! Scissors beats Paper";
                         }
                     }
                     else if (humanChoice === "scissors") {
                         if (compChoice === "paper"){
-                            return "You Win! Scissors beats Paper";
                             humanScore += 1;
+                            return "You Win! Scissors beats Paper";
                         }
                         else if (compChoice === "rock"){
-                            return "You Lose! Rock beats Scissors";
                             computerScore += 1;
+                            return "You Lose! Rock beats Scissors";
                         }
                     }
                 }
