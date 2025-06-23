@@ -4,7 +4,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <script>
-            
+            function getComputerChoice() {
+                let randomNum = Math.floor(Math.random() * 3);
+
+                let compChoice = (randomNum === 1) ? "Paper" : (randomNum === 2) ? "Rock" : (randomNum === 3) ? "Scissors" : "Error";
+                
+                return compChoice;
+            }
+            console.log(getComputerChoice());
         </script>
     </head>
     <body></body>
