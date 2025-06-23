@@ -28,7 +28,39 @@
                         break;
                 }
             }
-
+            function playRound(humanChoice, compChoice) {
+                if (humanChoice === compChoice.toLowercase()) {
+                    return "Draw"
+                }
+                else
+                {
+                    if (humanChoice === "rock") {
+                        if (compChoice === "paper"){
+                            return "You Lose! Paper beats Rock"
+                        }
+                        if (compChoice === "scissors"){
+                            return "You Win! Rock beats Scissors"
+                        }
+                    }
+                    else if (humanChoice === "paper") {
+                        if (compChoice === "rock"){
+                            return "You Win! Paper beats Rock"
+                        }
+                        if (compChoice === "scissors"){
+                            return "You Lose! Scissors beats Paper"
+                        }
+                    }
+                    else if (humanChoice === "scissors") {
+                        if (compChoice === "paper"){
+                            return "You Win! Scissors beats Paper"
+                        }
+                        if (compChoice === "rock"){
+                            return "You Lose! Rock beats Scissors";
+                        }
+                    }
+                }
+            }
+            
             console.log(getHumanChoice());
         </script>
     </head>
