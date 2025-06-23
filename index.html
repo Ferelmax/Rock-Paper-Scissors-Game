@@ -12,6 +12,22 @@
                 return compChoice;
             }
             console.log(getComputerChoice());
+            function getHumanChoice() {
+                let humanChoice = parseInt(prompt("Please type a number to select:\n 1: Rock 2: Paper 3: Scissors"));
+                switch (humanChoice) {
+                    case 1:
+                        return "Rock";
+                        break;
+                    case 2:
+                        return "Paper";
+                        break;
+                    case 3:
+                        return "Scissors";
+                        break;
+                }
+            }
+
+            console.log(getHumanChoice());
         </script>
     </head>
     <body></body>
