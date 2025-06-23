@@ -9,27 +9,26 @@
             function getComputerChoice() {
                 let randomNum = Math.floor(Math.random() * 3);
 
-                let compChoice = (randomNum === 0) ? "Paper" : (randomNum === 1) ? "Rock" : (randomNum === 2) ? "Scissors" : "Error";
+                let compChoice = (randomNum === 0) ? "paper" : (randomNum === 1) ? "rock" : (randomNum === 2) ? "scissors" : "error";
                 
                 return compChoice;
             }
-            console.log(getComputerChoice());
             function getHumanChoice() {
                 let humanChoice = parseInt(prompt("Please type a number to select:\n 1: Rock 2: Paper 3: Scissors"));
                 switch (humanChoice) {
                     case 1:
-                        return "Rock";
+                        return "rock";
                         break;
                     case 2:
-                        return "Paper";
+                        return "paper";
                         break;
                     case 3:
-                        return "Scissors";
+                        return "scissors";
                         break;
                 }
             }
             function playRound(humanChoice, compChoice) {
-                if (humanChoice === compChoice.toLowercase()) {
+                if (humanChoice === compChoice) {
                     return "Draw"
                 }
                 else
@@ -38,7 +37,7 @@
                         if (compChoice === "paper"){
                             return "You Lose! Paper beats Rock"
                         }
-                        if (compChoice === "scissors"){
+                        else if (compChoice === "scissors"){
                             return "You Win! Rock beats Scissors"
                         }
                     }
@@ -46,7 +45,7 @@
                         if (compChoice === "rock"){
                             return "You Win! Paper beats Rock"
                         }
-                        if (compChoice === "scissors"){
+                        else if (compChoice === "scissors"){
                             return "You Lose! Scissors beats Paper"
                         }
                     }
@@ -54,7 +53,7 @@
                         if (compChoice === "paper"){
                             return "You Win! Scissors beats Paper"
                         }
-                        if (compChoice === "rock"){
+                        else if (compChoice === "rock"){
                             return "You Lose! Rock beats Scissors";
                         }
                     }
@@ -64,7 +63,9 @@
             const humanSelection = getHumanChoice();
             const compSelection = getComputerChoice();
 
-            console.log(getHumanChoice());
+            console.log(`Computer: ${compSelection}`);
+            console.log(`Human: ${humanSelection}`);
+
             console.log(playRound(humanSelection,compSelection));
         </script>
     </head>
